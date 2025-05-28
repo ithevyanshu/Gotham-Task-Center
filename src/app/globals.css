@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 97%; /* Very Light Cool Off-White */
+    --foreground: 220 10% 25%; /* Dark Cool Grey */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 220 10% 25%; /* Dark Cool Grey */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 220 10% 25%; /* Dark Cool Grey */
+
+    --primary: 210 60% 55%; /* Calm Trustworthy Blue */
+    --primary-foreground: 210 40% 98%; /* Very Light Blue/White */
+
+    --secondary: 220 15% 94%; /* Light Cool Grey */
+    --secondary-foreground: 220 10% 35%; /* Medium Cool Grey */
+
+    --muted: 220 15% 90%; /* Slightly Darker Light Cool Grey */
+    --muted-foreground: 220 10% 45%; /* Medium Cool Grey for muted text */
+
+    --accent: 30 90% 60%; /* Friendly Orange */
+    --accent-foreground: 30 60% 98%; /* Very Light Orange/White */
+
+    --destructive: 0 75% 55%; /* A slightly less aggressive red */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
+
+    --border: 220 15% 88%; /* Slightly darker than muted for borders */
+    --input: 220 15% 92%; /* Input background - slightly off-white */
+    --ring: 210 60% 50%; /* Ring color related to primary */
+
+    --radius: 0.5rem;
+
+    --chart-1: 210 70% 60%; /* Primary related */
+    --chart-2: 30 80% 65%;  /* Accent related */
+    --chart-3: 180 50% 50%; /* A complementary teal/cyan */
+    --chart-4: 270 60% 65%; /* A complementary purple */
+    --chart-5: 45 70% 60%;  /* A complementary gold/yellow */
+
+    --sidebar-background: 220 15% 96%; /* Consistent with overall light theme */
+    --sidebar-foreground: 220 10% 30%; /* Darker grey for sidebar text */
+    --sidebar-primary: 210 60% 55%; /* Same as main primary */
+    --sidebar-primary-foreground: 210 40% 98%; /* Same as main primary foreground */
+    --sidebar-accent: 220 15% 90%; /* Slightly darker background for hover/active */
+    --sidebar-accent-foreground: 210 60% 50%; /* Primary color for active/hover text */
+    --sidebar-border: 220 15% 88%; /* Consistent with main border */
+    --sidebar-ring: 210 60% 50%; /* Consistent with main ring */
+  }
+
+  .dark {
+    --background: 220 10% 5%; /* Very Dark Cool Blue/Grey - Batman Black */
+    --foreground: 220 15% 85%; /* Light Cool Grey/Off-White - Bat-Suit Grey */
+
+    --card: 220 10% 10%; /* Slightly Lighter Dark Blue/Grey - Dark Armor Plate */
+    --card-foreground: 220 15% 85%; /* Light Cool Grey/Off-White */
+
+    --popover: 220 10% 8%; /* Very Dark for popovers - Shadowy */
+    --popover-foreground: 220 15% 85%; /* Light Cool Grey/Off-White */
+
+    --primary: 210 30% 25%; /* Dark Steely Blue - Night Sky Blue */
+    --primary-foreground: 210 20% 90%; /* Light for contrast */
+
+    --secondary: 220 10% 15%; /* Darker Grey - Utility Belt Detail */
+    --secondary-foreground: 220 15% 70%; /* Lighter grey for secondary text */
+
+    --muted: 220 10% 12%; /* Darker muted background - Subtle Texture */
+    --muted-foreground: 220 10% 55%; /* Lighter muted text */
+
+    --accent: 40 80% 45%; /* Muted Batman Yellow/Gold - Bat-Symbol Gold */
+    --accent-foreground: 40 100% 5%; /* Very Dark, almost black for contrast on accent */
+    
+    --destructive: 0 60% 35%; /* Deep Dark Red - Warning Signal */
+    --destructive-foreground: 0 0% 90%; /* Light text on destructive */
+
+    --border: 220 10% 20%; /* Darker border - Panel Lines */
+    --input: 220 10% 18%; /* Darker input background - Console Input */
+    --ring: 40 80% 50%; /* Ring color - Accent Yellow */
+    
+    --chart-1: hsl(var(--accent)); /* Bat-Symbol Gold */
+    --chart-2: hsl(var(--primary)); /* Night Sky Blue */
+    --chart-3: 220 10% 50%; /* Medium Grey */
+    --chart-4: 220 10% 30%; /* Darker Grey */
+    --chart-5: 40 60% 30%;  /* Darker Gold/Brown */
+
+    --sidebar-background: 220 10% 8%; /* Batcave Wall */
+    --sidebar-foreground: 220 15% 80%; /* Console Text */
+    --sidebar-primary: hsl(var(--accent)); /* Active Item - Bat-Symbol Gold */
+    --sidebar-primary-foreground: hsl(var(--accent-foreground)); /* Active Item Text - Dark */
+    --sidebar-accent: 220 10% 15%; /* Hover Item BG - Subtle Highlight */
+    --sidebar-accent-foreground: hsl(var(--accent)); /* Hover Item Text - Bat-Symbol Gold */
+    --sidebar-border: 220 10% 18%; /* Sidebar Border */
+    --sidebar-ring: hsl(var(--accent)); /* Sidebar Ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .is-dragging {
+    opacity: 0.6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: scale(1.03);
+  }
+}
